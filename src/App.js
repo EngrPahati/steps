@@ -10,7 +10,7 @@ const messages = [
 export default function App() {
   const [step, setStep] = useState(1);
 
-  function nextStep() {
+  function handleNext() {
     if (step >= 3) {
       return;
     } else {
@@ -18,7 +18,7 @@ export default function App() {
     }
   }
 
-  function previousStep() {
+  function handlePrevious() {
     if (step <= 1) {
       return;
     } else {
@@ -37,11 +37,11 @@ export default function App() {
       <div className="buttons">
         <button
           style={{ backgroundColor: "#7950f2", color: "#fff" }}
-          onClick={() => previousStep()}
+          onClick={handlePrevious}
         >Previous</button>
         <button
           style={{ backgroundColor: "#7950f2", color: "#fff" }}
-          onClick={() => nextStep()}
+          onClick={handleNext}
         >Next</button>
       </div>
     </div>
