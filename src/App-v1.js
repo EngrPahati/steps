@@ -44,33 +44,18 @@ function Steps() {
         <div className={step >= 3 ? 'active' : ''}>3</div>
       </div>
       <p className="message">Step {step}: { messages[step - 1]}</p>
-          <div className="buttons">
-            <Button
-              bgColor="#7950f2"
-              textColor="#fff"
-              onClick={handlePrevious}
-              text="Previous"
-            />
-            <Button
-              bgColor="#7950f2"
-              textColor="#fff"
-              onClick={handleNext}
-              text="Next"
-            />
+      <div className="buttons">
+        <button
+          style={{ backgroundColor: "#7950f2", color: "#fff" }}
+          onClick={handlePrevious}
+        >Previous</button>
+        <button
+          style={{ backgroundColor: "#7950f2", color: "#fff" }}
+          onClick={handleNext}
+        >Next</button>
         </div>
         </div >)
       }
       </div>
   );  
-}
-
-function Button({textColor, bgColor, onClick, text}) {
-  return (
-    <button
-      style={{ backgroundColor: bgColor, color: textColor }}
-      onClick={onClick}
-    >
-      {text}
-    </button>
-  );
 }
